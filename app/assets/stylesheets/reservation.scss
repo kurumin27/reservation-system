@@ -1,3 +1,88 @@
-// Place all the styles related to the reservation controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  box-sizing: border-box;
+}
+
+// 共通
+
+.Body {
+  background-image: image-url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: 800px;
+  text-align: center;
+  height: 70vh;
+}
+
+// 新規予約時
+
+.Form-box {
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-top: 50px;
+  margin-bottom: 40px;
+  width: 100vw;
+  &__content {
+    align-items: center;
+    padding: 20px;
+    display: flex;
+    margin: 10px;
+    &__title {
+      background-color: rgba( 255, 255, 255, 0.45 );
+      color: gray;
+      font-size: 15px;
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      }
+    &__requirement {
+      background-color: red;
+      color: white;
+      padding: 1px 2px;
+      font-size: 11px;
+      margin-left: 4px;
+      text-align: center;
+      border-radius: 2px;
+      font-weight: bold;
+    }
+    &__select {
+      display: block;
+      padding: 13px 5px 13px 5px;
+      margin-left: 40px;
+      font-size: 13px;
+      color: gray;
+      height: 43px;
+    }
+    &__price{
+      display: block;
+      padding: 13px 0px;
+      margin-left: 40px;
+      font-size: 13px;
+      color: gray;
+      height: 43px;
+    }
+  }
+  &__button {
+    background-color: #999999;
+    border-style: none;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 8px 50px;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// 予約後の画面
+
+.Contents {
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-top: 50px;
+  margin-bottom: 40px;
+  width: 100vw;
+  &__field {
+    color: gray;
+    font-size: 15px;
+  }
+}

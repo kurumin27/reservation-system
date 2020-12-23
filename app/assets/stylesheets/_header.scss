@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+$font-color: #fff;
+$space: 40px;
+
+
+.Header {
+  height: 120px;
+  padding: 30px 50px;
+}
+
+.Top {
+  background-color: #f7f7f8;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: $font-color;
+  &__title {
+    color: $font-color;
+  }
+  &__account {
+    display: flex;
+    justify-content: end;
+    font-size: 14px;
+    &__sgin-up {
+    }
+    &__sgin-in {
+      margin-left: 15px;
+    }
+  }
+}
+
+.logout {
+  margin-left: 15px;
+  border: none;
+  background: transparent;
+}
+
+.Menu {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #BA3056;
+  font-size: 13px;
+  padding-left: 15px;
+  &__new {
+    color: $font-color;
+  }
+  &__check {
+    color: $font-color;
+    margin-left: $space;
+  }
+  &__change {
+    color: $font-color;
+    margin-left: $space;
+  }
+  &__cancel {
+    color: $font-color;
+    margin-left: $space;
+  }
+  &__back {
+    color: $font-color;
+    margin-left: $space;
+  }
+}
