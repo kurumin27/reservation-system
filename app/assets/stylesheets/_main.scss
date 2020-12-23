@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+.Main {
+  background-image: image-url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: 800px;
+  text-align: center;
+  // あとで確認する
+  height: 70vh;
+}
+
+.Inform {
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-top: 50px;
+  margin-bottom: 40px;
+  width: 100vw;
+   &__field {
+     color: gray;
+     font-size: 15px;
+   }
+}
