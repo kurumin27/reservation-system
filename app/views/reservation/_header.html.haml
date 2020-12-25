@@ -4,7 +4,7 @@
       = link_to "サロン予約", root_path
       -# あとでロゴを置く
     %ul.Top__account
-      -# - if user_signed_in?
+      - if user_signed_in?
         %li.Top__account__sgin-up
           = link_to "マイページ", new_user_registration_path
         %li.Top__account__sgin-in
