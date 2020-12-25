@@ -18,9 +18,5 @@
     .alert
       - if @user.errors.include?(:password)
         = @user.errors.full_messages_for(:password).first
-  - if devise_mapping.rememberable?
-    .Field
-      = f.check_box :remember_me
-      = f.label :パスワードを記憶する
   .Actions
     = f.submit "ログイン", class: "Login-button"
