@@ -24,9 +24,9 @@ ActiveAdmin.register_page "Dashboard" do
 
       columns do
         panel "Info" do
-          para "Welcome to ActiveAdmin."
+          para "お知らせはありません。"
         end
       end
     # end
-  end # content
+  end
 end

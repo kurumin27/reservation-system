@@ -1,19 +1,21 @@
 ActiveAdmin.register User do
 
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # Uncomment all parameters which should be permitted for assignment
-  #
-  permit_params :name, :telephone, :email, :encrypted_password, :remember_created_at
-  #
+  # has_many :reservations
+  permit_params :name, :telephone, :email, :encrypted_password
+  # controller do
+  #   def update
+  #     User.find(user_params)
+  #     redirect_to admin_root_path
+  #   end
+  #   private
+  #   def user_params
+  #     params.require(:user).permit(:name, :telephone, :password)
+  #   end
   # or
-  
   # permit_params do
   #   permitted = [:name, :telephone, :email, :encrypted_password, :remember_created_at]
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
 
 end
