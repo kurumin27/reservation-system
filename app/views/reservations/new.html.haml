@@ -30,16 +30,15 @@
       .alert
         = render 'layouts/notifications'
       .Form-box__content
-        = f.label 'ご希望のコース', class: "Form-box__content__title"
+        = f.label :product_name, 'ご希望のコース', class: "Form-box__content__title"
         %span.Form-box__content__requirement
           必須
-        = f.collection_select :product_name, @product, :id, :name,{prompt:"選択してください"}
-          -# { include_blank: '選択してください' },
-          -# { class: "Form-box__content__select" }
-          -# }
-      .Form-box__content
-        = f.label :price, 'ご希望のコースの金額', class: "Form-box__content__title"
-        .Form-box__content__price
-          %p ここに金額が表示される
+        = f.select :product_name, @products.map { |product| [product.product_name]},
+          { include_blank: '選択してください' },
+          { class: "Form-box__content__select" }
+      -# .Form-box__content
+      -#   = f.label :price, 'ご希望のコースの金額', class: "Form-box__content__title"
+      -#   .Form-box__content__price
+      -#     %p ここに金額が表示される  円
       .Form-box__content
         = f.submit '予約', class: "Form-box__button"
