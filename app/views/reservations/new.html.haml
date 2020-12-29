@@ -4,36 +4,36 @@
       .alert
         = render 'layouts/notifications'
       .Form-box__content
-        = f.label :date, 'ご希望の日にち', class: "Form-box__content__title"
+        = f.label :datetime, 'ご希望の日時', class: "Form-box__content__title"
         %span.Form-box__content__requirement
           必須
-        = f.date_field :date, class: "Form-box__content__select"
+        = f.datetime_field :datetime, class: "Form-box__content__select"
       .alert
         = render 'layouts/notifications'
+      -# .Form-box__content
+      -#   = f.label :time, 'ご希望のお時間', class: "Form-box__content__title"
+      -#   %span.Form-box__content__requirement
+      -#     必須
+      -#   = f.select :time,
+      -#     { '10:00~': 1,
+      -#       '11:00~': 2, 
+      -#       '12:00~': 3,
+      -#       '13:00~': 4,
+      -#       '14:00~': 5,
+      -#       '15:00~': 6,
+      -#       '16:00~': 7,
+      -#       '17:00~': 8,
+      -#       '18:00~': 9,
+      -#       '19:00~': 10 },
+      -#     { include_blank: '選択してください' },
+      -#     { class: "Form-box__content__select" }
+      -# .alert
+      -#   = render 'layouts/notifications'
       .Form-box__content
-        = f.label :time, 'ご希望のお時間', class: "Form-box__content__title"
+        = f.label :product_id, 'ご希望のコース', class: "Form-box__content__title"
         %span.Form-box__content__requirement
           必須
-        = f.select :time,
-          { '10:00~': 1,
-            '11:00~': 2, 
-            '12:00~': 3,
-            '13:00~': 4,
-            '14:00~': 5,
-            '15:00~': 6,
-            '16:00~': 7,
-            '17:00~': 8,
-            '18:00~': 9,
-            '19:00~': 10 },
-          { include_blank: '選択してください' },
-          { class: "Form-box__content__select" }
-      .alert
-        = render 'layouts/notifications'
-      .Form-box__content
-        = f.label :product_name, 'ご希望のコース', class: "Form-box__content__title"
-        %span.Form-box__content__requirement
-          必須
-        = f.select :product_name, @products.map { |product| [product.product_name]},
+        = f.select :product_id, @products.map { |product| [product.product_name, product.id]},
           { include_blank: '選択してください' },
           { class: "Form-box__content__select" }
       -# .Form-box__content
