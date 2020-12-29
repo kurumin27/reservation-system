@@ -28,7 +28,7 @@ ja:
         name: お名前（フルネーム）
         telephone: お電話番号（ハイフンなし）
     models:
-      user: ユーザ
+      user: お客様
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
