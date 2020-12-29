@@ -29,6 +29,13 @@ ja:
         telephone: お電話番号（ハイフンなし）
     models:
       user: お客様
+      admin_user: 管理者
+    attributes:
+      admin_user:
+        created_at: 作成日
+        email: Eメール
+        updated_at: 更新日
+        remember_created_at: ログイン記憶時刻
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。

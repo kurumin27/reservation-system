@@ -1,6 +1,6 @@
 ActiveAdmin.register User do
-
-  permit_params :name, :telephone, :email, :encrypted_password
+  actions :index
+  
   # 一覧ページの検索条件削除
   remove_filter :reservation
 
@@ -11,6 +11,17 @@ ActiveAdmin.register User do
   filter :created_at
   filter :updated_at
 
+  # 一覧ページ
+  index do
+    column :id
+    column :name
+    column :email
+    column :telephone
+    column :created_at
+
+    actions 
+  end
+  permit_params :name, :telephone, :email
   # or
   # permit_params do
   #   permitted = [:name, :telephone, :email, :encrypted_password, :remember_created_at]
