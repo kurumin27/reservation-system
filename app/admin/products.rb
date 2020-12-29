@@ -1,5 +1,4 @@
 ActiveAdmin.register Product do
-  # belongs_to :reservation
 
   # 一覧ページの検索条件削除
   remove_filter :reservation
