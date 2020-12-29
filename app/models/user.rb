@@ -6,5 +6,5 @@ class User < ApplicationRecord
   validates :telephone, presence: true, format: {with: /\A\d{10,11}\z/}, numericality: { only_integer: true }
   validates :password, presence: true, confirmation: true
 
-  has_many :reservations
+  has_many :reservations, dependent: :destroy
 end
