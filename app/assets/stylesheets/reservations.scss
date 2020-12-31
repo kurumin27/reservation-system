@@ -9,67 +9,96 @@
   background-repeat: no-repeat;
   background-size: 45%;
   background-position: 800px;
-  text-align: center;
   height: 70vh;
+  font-size: 13px;
 }
 
 // 新規予約時
 
+@mixin labels {
+  font-weight: bold;
+  line-height: 1.4em;
+  background-color: rgba( 255, 255, 255, 0.45 );
+}
+
+@mixin requirements {
+  background-color: red;
+  color: white;
+  font-size: 11px;
+  display: inline-block;
+  line-height: 1.4em;
+  border-radius: 2px;
+  margin-left: 4px;
+  padding: 1px 2px;
+  font-weight: bold;
+}
+
+@mixin selections{
+  width: 100%;
+  margin-top: 3px;
+  height: 40px;
+  padding: 13px 5px 13px 5px;
+}
+
+@mixin errors {
+  color: red;
+  padding: 0px 530px 0px 530px;
+  margin-left: 10px;
+}
+
 .Form-box {
-  padding-left: 300px;
-  padding-right: 300px;
   padding-top: 50px;
   margin-bottom: 40px;
   width: 100vw;
-  &__content {
-    align-items: center;
-    padding: 20px;
-    display: flex;
+  // ご希望の日時
+  &__datetime {
+    padding: 0px 530px 0px 530px;
     margin: 10px;
     &__title {
-      background-color: rgba( 255, 255, 255, 0.45 );
-      color: gray;
-      font-size: 15px;
-      display: block;
-      text-align: center;
-      font-weight: bold;
+      @include labels;
       }
     &__requirement {
-      background-color: red;
-      color: white;
-      padding: 1px 2px;
-      font-size: 11px;
-      margin-left: 4px;
-      text-align: center;
-      border-radius: 2px;
-      font-weight: bold;
+      @include requirements;
     }
     &__select {
-      display: block;
-      padding: 13px 5px 13px 5px;
-      margin-left: 40px;
-      font-size: 13px;
-      color: gray;
-      height: 43px;
+      @include selections;
     }
-    &__price{
-      display: block;
-      padding: 13px 0px;
-      margin-left: 40px;
-      font-size: 13px;
-      color: gray;
-      height: 43px;
+    &__alert {
+      @include errors;
     }
   }
+  // ご希望のコース
+  &__course {
+    padding: 20px 530px 0px 530px;
+    margin: 10px;
+    &__title {
+      @include labels;
+      }
+    &__requirement {
+      @include requirements;
+    }
+    &__select {
+      @include selections;
+    }
+    &__alert {
+      @include errors;
+    }
+  }
+}
+
+.Reservation{
+  margin: 80px 600px;
   &__button {
     background-color: #999999;
     border-style: none;
     color: #ffffff;
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 8px 50px;
     font-size: 18px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
   }
 }
 

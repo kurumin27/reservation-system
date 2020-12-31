@@ -16,11 +16,11 @@ ja:
         created_at: 作成日
         updated_at: 更新日
       reservation:
+        product: ご希望のコース
         product_name: 商品名
         price: 金額
         name: お名前
-        date: 予約日
-        time: 予約時間
+        datetime: 予約日時
         created_at: 作成日
         updated_at: 更新日
   date:
@@ -144,7 +144,7 @@ ja:
       odd: は奇数にしてください
       other_than: は%{count}以外の値にしてください
       present: は入力しないでください
-      required: を入力してください
+      required: を選択してください
       taken: はすでに存在します
       too_long: は%{count}文字以内で入力してください
       too_short: は%{count}文字以上で入力してください
