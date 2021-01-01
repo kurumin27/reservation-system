@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   root 'users#index'
-  resources :reservations, only: [:new, :create, :edit, :update, :destroy]
-  resources :users, only: [:index, :show]
+  resources :reservations, only: [:new, :create, :edit, :update, :destroy, :show]
+  resources :users, only: [:index]
 end

@@ -1,4 +1,4 @@
-// こちらを削除トップページ（予約一覧）
+// トップページ（予約一覧）
 * {
   box-sizing: border-box;
 }
@@ -50,25 +50,6 @@
     padding-right: 15px;
   }
 }
-
-.Box {
-  position: relative;
-  padding-top: 15px;
-  &__change {
-    background-color: #EA6791;
-    @include button;
-    position: absolute;
-    top: 30px;
-    left: 498px;
-  }
-  &__cancel {
-    background-color: gray;
-    @include button;
-    position: absolute;
-    top: 70px;
-    left: 498px;
-  }
-}
   
 .Datetime {
   @include items;
@@ -91,15 +72,13 @@
   }
 }
 
-.Price {
+.Details {
   @include items;
   border-bottom: 1px solid gray;
   margin-bottom: 20px;
-  &__title {
-    @include title-rate;
-  }
-  &__description {
-    @include description-rate;
+  font-size: 16px;
+  font-weight: bold;
+  &__reservation {
+    margin-left: 480px;
   }
 }
-

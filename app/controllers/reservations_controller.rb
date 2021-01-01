@@ -1,5 +1,6 @@
 class ReservationsController < ApplicationController
   before_action :product_name, only:[:new, :create, :edit, :update]
+  before_action :user_reservation, only:[:show]
 
   def new
     @reservation = Reservation.new
@@ -13,12 +14,16 @@ class ReservationsController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
   end
 
   def destroy
+  end
+
+  def show
   end
 
   private
@@ -28,6 +33,10 @@ class ReservationsController < ApplicationController
 
   def product_name
     @products = Product.all
+  end
+
+  def user_reservation
+    @reservation = Reservation.find(params[:id])
   end
 
 end

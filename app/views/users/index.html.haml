@@ -2,20 +2,15 @@
   .Information
     - if user_signed_in?
       .Information__title
-        = "#{ current_user.name }さんの予約一覧"
+        = "#{ current_user.name }さんの予約一覧"  
       .Information__reservation
         - @reservations.each do |reservation|
           - if user_signed_in? && current_user.id == reservation.user_id
-            .Box
-              .Box__change
-                = link_to "予約変更", '#'
-              .Box__cancel
-                = link_to "予約取消", '#' 
             .Datetime
               = render partial: "datetime", locals: { reservation: reservation}
             .Course
               = render partial: "course", locals: { reservation: reservation}
-            .Price
-              = render partial: "price", locals: { reservation: reservation}
+            .Details
+              = link_to "予約変更/取消", reservation_path(reservation.id), method: :get, class: "Details__reservation"
     - else
       %p ログインして下さい
