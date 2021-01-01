@@ -1,8 +1,6 @@
 class Reservation < ApplicationRecord
-  validates :date, presence: true
-  validates :time, presence: true
-  validates :product_name, presence: true
+  validates :datetime, presence: { message: "を選択してください"}
 
-  has_one :product
+  belongs_to :product
   belongs_to :user
 end

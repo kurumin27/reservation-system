@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   validates :product_name, presence: true
   validates :price, presence: true
-
-  belongs_to :reservation
+  
+  has_many :reservation
 end

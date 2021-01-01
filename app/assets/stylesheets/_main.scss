@@ -1,25 +1,84 @@
+// トップページ（予約一覧）
 * {
   box-sizing: border-box;
 }
 
+@mixin items {
+  padding-bottom: 15px;
+  display: flex;
+}
+
+@mixin title-rate {
+  width: 40vw;
+}
+
+@mixin description-rate {
+  width: 60vw;
+}
+
+@mixin button {
+  color: #ffffff;
+  border-radius: 2px;
+  padding: 5px 30px;
+  border-style: none;
+}
+
 .Main {
+  padding-left: 400px;
+  padding-right: 400px;
+  padding-top: 50px;
+  margin-bottom: 40px;
+  width: 100vw;
   background-image: image-url("background.jpg");
   background-repeat: no-repeat;
   background-size: 45%;
   background-position: 800px;
-  text-align: center;
-  // あとで確認する
-  height: 70vh;
+  font-size: 13px;
 }
 
-.Inform {
-  padding-left: 300px;
-  padding-right: 300px;
-  padding-top: 50px;
-  margin-bottom: 40px;
-  width: 100vw;
-   &__field {
-     color: gray;
-     font-size: 15px;
-   }
+.Information {
+  &__title {
+    border-bottom: 5px solid gray;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  &__reservation {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+  
+.Datetime {
+  @include items;
+  margin-top: 20px;
+  &__title {
+    @include title-rate;
+  }
+  &__description {
+    @include description-rate;
+  }
+}
+
+.Course {
+  @include items;
+  &__title {
+    @include title-rate;
+  }
+  &__description {
+    @include description-rate;
+  }
+}
+
+.Details {
+  @include items;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  &__reservation {
+    margin-left: 480px;
+  }
 }

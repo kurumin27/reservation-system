@@ -1,0 +1,22 @@
+.Main
+  .Information
+    .Information__title
+      = "#{ current_user.name }さんの予約一覧"
+    .Information__reservation
+      .Box
+        .Box__change
+          = link_to "予約変更", edit_reservation_path(@reservation.id)
+        .Box__cancel
+          = link_to "予約取消", reservation_path(@reservation.id), method: :delete, data: { confirm: "本当に取消しますか？" }
+      .Datetime
+        .Datetime__title ご希望の予約日時
+        .Datetime__description
+          = @reservation.datetime.strftime("%Y- %m- %d / %H時 %M分〜")
+      .Course
+        .Course__title ご希望の予約コース
+        .Course__description
+          = @reservation.product.product_name
+      .Price
+        .Price__title ご希望の予約金額   
+        .Price__description
+          = "#{@reservation.product.price.to_s(:delimited)}円"
