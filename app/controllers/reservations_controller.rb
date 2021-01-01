@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
-  before_action :product_name, only:[:new, :create, :edit, :update]
-  before_action :user_reservation, only:[:show, :destroy, :edit]
+  before_action :product_details, only:[:new, :create, :edit, :update]
+  before_action :for_user_reservation, only:[:show, :destroy, :edit, :update]
 
   def new
     @reservation = Reservation.new
@@ -14,10 +14,10 @@ class ReservationsController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
+    @reservation.update(reservation_params)
   end
 
   def destroy
@@ -37,11 +37,11 @@ class ReservationsController < ApplicationController
     params.require(:reservation).permit(:datetime, :product_id).merge(user_id: current_user.id)
   end
 
-  def product_name
+  def product_details
     @products = Product.all
   end
 
-  def user_reservation
+  def for_user_reservation
     @reservation = Reservation.find(params[:id])
   end
 
