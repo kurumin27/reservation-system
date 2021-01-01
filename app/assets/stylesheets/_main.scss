@@ -3,17 +3,24 @@
   box-sizing: border-box;
 }
 
-@mixin items{
+@mixin items {
   padding-bottom: 15px;
   display: flex;
 }
 
-@mixin title-rate{
+@mixin title-rate {
   width: 40vw;
 }
 
-@mixin description-rate{
+@mixin description-rate {
   width: 60vw;
+}
+
+@mixin button {
+  color: #ffffff;
+  border-radius: 2px;
+  padding: 5px 30px;
+  border-style: none;
 }
 
 .Main {
@@ -39,13 +46,33 @@
   }
   &__reservation {
     padding-top: 15px;
-    padding-left: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
+.Box {
+  position: relative;
+  padding-top: 15px;
+  &__change {
+    background-color: #EA6791;
+    @include button;
+    position: absolute;
+    top: 30px;
+    left: 498px;
+  }
+  &__cancel {
+    background-color: gray;
+    @include button;
+    position: absolute;
+    top: 70px;
+    left: 498px;
+  }
+}
+  
 .Datetime {
   @include items;
-  margin-top: 15px;
+  margin-top: 20px;
   &__title {
     @include title-rate;
   }
@@ -53,6 +80,7 @@
     @include description-rate;
   }
 }
+
 .Course {
   @include items;
   &__title {
@@ -62,9 +90,11 @@
     @include description-rate;
   }
 }
+
 .Price {
   @include items;
   border-bottom: 1px solid gray;
+  margin-bottom: 20px;
   &__title {
     @include title-rate;
   }
@@ -72,3 +102,4 @@
     @include description-rate;
   }
 }
+

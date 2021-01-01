@@ -6,6 +6,11 @@
       .Information__reservation
         - @reservations.each do |reservation|
           - if user_signed_in? && current_user.id == reservation.user_id
+            .Box
+              .Box__change
+                = link_to "予約変更", '#'
+              .Box__cancel
+                = link_to "予約取消", '#' 
             .Datetime
               = render partial: "datetime", locals: { reservation: reservation}
             .Course
