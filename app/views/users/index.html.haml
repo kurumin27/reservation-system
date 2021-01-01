@@ -1,8 +1,10 @@
 .Main
   .Information
     - if user_signed_in?
+      .Notification
+        = render 'layouts/notifications'
       .Information__title
-        = "#{ current_user.name }さんの予約一覧"  
+        = "#{ current_user.name }さんの予約一覧"
       .Information__reservation
         - @reservations.each do |reservation|
           - if user_signed_in? && current_user.id == reservation.user_id
