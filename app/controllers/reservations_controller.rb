@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
   before_action :product_name, only:[:new, :create, :edit, :update]
-  before_action :user_reservation, only:[:show]
+  before_action :user_reservation, only:[:show, :destroy]
 
   def new
     @reservation = Reservation.new
@@ -14,13 +14,17 @@ class ReservationsController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
   end
 
   def destroy
+    if @reservation.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
   end
 
   def show
