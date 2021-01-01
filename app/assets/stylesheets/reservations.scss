@@ -3,7 +3,6 @@
 }
 
 // 共通
-
 .Body {
   background-image: image-url("background.jpg");
   background-repeat: no-repeat;
@@ -14,7 +13,6 @@
 }
 
 // 新規予約時
-
 @mixin labels {
   font-weight: bold;
   line-height: 1.4em;
@@ -103,7 +101,6 @@
 }
 
 // 予約後の画面
-
 .Contents {
   padding-left: 300px;
   padding-right: 300px;

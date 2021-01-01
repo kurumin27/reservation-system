@@ -5,9 +5,9 @@
       -# あとでロゴを置く
     %ul.Top__account
       - if user_signed_in?
-        %li.Top__account__sgin-up
-          = link_to "マイページ", new_user_registration_path
-        %li.Top__account__sgin-in
+        %li.Top__account__message
+          = "#{ current_user.name }さん、ようこそ"
+        %li.Top__account__logout
           = button_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout"
       - else
         %li.Top__account__sgin-up
@@ -16,8 +16,8 @@
           = link_to "ログイン", new_user_session_path
   .Menu
     = link_to "新規予約", new_reservation_path, class: "Menu__new"
-    = link_to "予約確認", '#', class: "Menu__check"
+    -# = link_to "予約確認", reservation_path(@reservation.id), class: "Menu__check"
     -# reservation_path(@reservation.id)
     = link_to "予約変更・取消", '#', class: "Menu__change"
     -# edit_reservation_path(@reservation.id)
-    = link_to "予約取消", '#', class: "Menu__cancel"
+    -# = link_to "予約取消", '#', class: "Menu__cancel"

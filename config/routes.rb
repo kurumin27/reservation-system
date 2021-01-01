@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  get 'users/index'
+  get 'users/show'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
-  root 'reservations#index'
-  resources :reservations, only: [:index, :new, :create, :edit, :update, :destroy]
-  resources :users, only: [:edit, :update]
+  root 'users#index'
+  resources :reservations, only: [:new, :create, :edit, :update, :destroy]
+  resources :users, only: [:index, :show]
 end
