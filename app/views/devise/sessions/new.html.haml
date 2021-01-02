@@ -1,4 +1,3 @@
--# = render "devise/shared/error_messages", resource: resource
 = form_with model: @user, url: user_session_path, id: 'Session_user', class: 'Session_user', local: true do |f|
   .alert
     = render 'layouts/notifications'
@@ -18,5 +17,7 @@
     .alert
       - if @user.errors.include?(:password)
         = @user.errors.full_messages_for(:password).first
-  .Actions
-    = f.submit "ログイン", class: "Login-button"
+  .Login
+    = f.submit "ログイン", class: "Login__button"
+  .GuestLogin
+    = link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post, class: "GuestLogin__button"

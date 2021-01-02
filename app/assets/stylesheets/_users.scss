@@ -25,15 +25,6 @@ $font-size: 13px;
   font-weight: bold;
 }
 
-@mixin button {
-  background-color: #662F6D;
-  padding: 3px 40px;
-  color: white;
-  border: 1px;
-  font-size: $font-size;
-  margin-bottom: 30px;
-}
-
 @mixin main {
   margin-top: 50px;
 }
@@ -46,12 +37,6 @@ $font-size: 13px;
 
 .Session_user {
   @include main;
-}
-
-.Actions {
-  padding: 0 500px;
-  margin: 30px 0px;
-  text-align: center;
 }
 
 .Field {
@@ -79,12 +64,64 @@ $font-size: 13px;
   }
 }
 
-.Login-button {
-  @include button;
+.Login {
+  margin: 40px 0px;
+  text-align: center;
+  &__button {
+    margin-bottom: 30px;
+    text-decoration: none;
+    border-radius: 2px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 14px;
+    color: black;
+    width: calc(100vw - 1140px);
+    border: 2px solid #ffb6c1;
+    background-color: #db7093;
+    color: white;
+  }  
+}
+
+.Register {
+  margin: 40px 0px;
+  text-align: center;
+  &__button {
+    margin-bottom: 30px;
+    text-decoration: none;
+    border-radius: 2px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 14px;
+    color: black;
+    width: calc(100vw - 1140px);
+    border: 2px solid #ffb6c1;
+    background-color: #db7093;
+    color: white;
+  }  
+}
+
+.GuestLogin {
+  margin: 40px 0px;
+  padding: 0px 570px;
+  text-align: center;
+  &__button {
+    margin-bottom: 30px;
+    text-decoration: none;
+    border-radius: 2px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-size: 14px;
+    color: black;
+    width: calc(100vw - 1140px);
+    border: 2px solid gray;
+    padding-right: 61px;
+    padding-left: 61px;
+  }
 }
 
 .Register-button {
   @include button;
+  border: 2px solid #814387;
 }
 
 .alert {
@@ -97,107 +134,107 @@ $font-size: 13px;
   display: contents
 }
 
-// 予約の詳細
-* {
-  box-sizing: border-box;
-}
+// // 予約の詳細
+// * {
+//   box-sizing: border-box;
+// }
 
-@mixin items {
-  padding-bottom: 15px;
-  display: flex;
-}
+// @mixin items {
+//   padding-bottom: 15px;
+//   display: flex;
+// }
 
-@mixin title-rate {
-  width: 40vw;
-}
+// @mixin title-rate {
+//   width: 40vw;
+// }
 
-@mixin description-rate {
-  width: 60vw;
-}
+// @mixin description-rate {
+//   width: 60vw;
+// }
 
-@mixin button {
-  color: #ffffff;
-  border-radius: 2px;
-  padding: 5px 30px;
-  border-style: none;
-}
+// @mixin button {
+//   color: #ffffff;
+//   border-radius: 2px;
+//   padding: 5px 30px;
+//   border-style: none;
+// }
 
-.Main {
-  padding-left: 400px;
-  padding-right: 400px;
-  padding-top: 50px;
-  margin-bottom: 40px;
-  width: 100vw;
-  background-image: image-url("background.jpg");
-  background-repeat: no-repeat;
-  background-size: 45%;
-  background-position: 800px;
-  font-size: 13px;
-}
+// .Main {
+//   padding-left: 400px;
+//   padding-right: 400px;
+//   padding-top: 50px;
+//   margin-bottom: 40px;
+//   width: 100vw;
+//   background-image: image-url("background.jpg");
+//   background-repeat: no-repeat;
+//   background-size: 45%;
+//   background-position: 800px;
+//   font-size: 13px;
+// }
 
-.Information {
-  &__title {
-    border-bottom: 5px solid gray;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  &__reservation {
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
+// .Information {
+//   &__title {
+//     border-bottom: 5px solid gray;
+//     padding-bottom: 10px;
+//     padding-left: 10px;
+//     font-size: 18px;
+//     font-weight: bold;
+//   }
+//   &__reservation {
+//     padding-top: 15px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//   }
+// }
 
-.Box {
-  position: relative;
-  padding-top: 15px;
-  &__change {
-    background-color: #EA6791;
-    @include button;
-    position: absolute;
-    top: 30px;
-    left: 498px;
-  }
-  &__cancel {
-    background-color: gray;
-    @include button;
-    position: absolute;
-    top: 70px;
-    left: 498px;
-  }
-}
+// .Box {
+//   position: relative;
+//   padding-top: 15px;
+//   &__change {
+//     background-color: #EA6791;
+//     @include button;
+//     position: absolute;
+//     top: 30px;
+//     left: 498px;
+//   }
+//   &__cancel {
+//     background-color: gray;
+//     @include button;
+//     position: absolute;
+//     top: 70px;
+//     left: 498px;
+//   }
+// }
   
-.Datetime {
-  @include items;
-  margin-top: 20px;
-  &__title {
-    @include title-rate;
-  }
-  &__description {
-    @include description-rate;
-  }
-}
+// .Datetime {
+//   @include items;
+//   margin-top: 20px;
+//   &__title {
+//     @include title-rate;
+//   }
+//   &__description {
+//     @include description-rate;
+//   }
+// }
 
-.Course {
-  @include items;
-  &__title {
-    @include title-rate;
-  }
-  &__description {
-    @include description-rate;
-  }
-}
+// .Course {
+//   @include items;
+//   &__title {
+//     @include title-rate;
+//   }
+//   &__description {
+//     @include description-rate;
+//   }
+// }
 
-.Price {
-  @include items;
-  border-bottom: 1px solid gray;
-  margin-bottom: 20px;
-  &__title {
-    @include title-rate;
-  }
-  &__description {
-    @include description-rate;
-  }
-}
+// .Price {
+//   @include items;
+//   border-bottom: 1px solid gray;
+//   margin-bottom: 20px;
+//   &__title {
+//     @include title-rate;
+//   }
+//   &__description {
+//     @include description-rate;
+//   }
+// }

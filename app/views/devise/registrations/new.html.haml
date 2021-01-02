@@ -39,5 +39,5 @@
     .alert
       - if @user.errors.include?(:password_confirmation)
         = @user.errors.full_messages_for(:password_confirmation).first
-  .Actions
-    = f.submit '登録', class: "Register-button"
+  .Register
+    = f.submit '登録', class: "Register__button"
