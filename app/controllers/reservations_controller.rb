@@ -17,7 +17,9 @@ class ReservationsController < ApplicationController
   end
 
   def update
-    @reservation.update(reservation_params)
+    unless @reservation.update(reservation_params)
+      render :edit
+    end
   end
 
   def destroy
