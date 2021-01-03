@@ -1,5 +1,5 @@
-unless AdminUser.find_by(email: 'admin@example.com')
-  AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+unless AdminUser.find_by(email: ENV['KEY'])
+  AdminUser.create!(email: ENV['KEY'], password: ENV['SECRET_KEY'], password_confirmation: ENV['SECRET_KEY']) if Rails.env.development?
 end
 Product.create!(
   [
