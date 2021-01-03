@@ -117,11 +117,6 @@ $font-size: 13px;
   }
 }
 
-.Register-button {
-  @include button;
-  border: 2px solid #814387;
-}
-
 .alert {
   color: red;
 }
