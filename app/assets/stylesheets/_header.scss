@@ -11,23 +11,25 @@ $space: 40px;
 
 
 .Header {
-  height: 120px;
-  padding: 30px 50px;
+  height: 150px;
 }
 
 .Top {
   background-color: #f7f7f8;
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 10px 10px;
   color: $font-color;
   &__title {
     color: $font-color;
+    padding-left: 30px;
   }
   &__account {
     display: flex;
     justify-content: end;
     font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     &__sgin-up {
       border-right: 1px solid #B3B3B3;
       border-left: 1px solid #B3B3B3;
@@ -59,8 +61,12 @@ $space: 40px;
   justify-content: flex-start;
   background-color: #BA3056;
   font-size: 13px;
-  padding-left: 15px;
+  padding-left: 50px;
   &__new {
+    color: $font-color;
+  }
+  &__confirm {
+    padding-left: 50px;
     color: $font-color;
   }
 }

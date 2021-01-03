@@ -1,8 +1,7 @@
 .Header
   .Top
-    .Top__title
-      = link_to "サロン予約", root_path
-      -# あとでロゴを置く
+    %h.Top__title
+      = link_to image_tag('logo2.png'), root_path
     %ul.Top__account
       - if user_signed_in?
         %li.Top__account__message
@@ -16,3 +15,4 @@
           = link_to "ログイン", new_user_session_path
   .Menu
     = link_to "新規予約", new_reservation_path, class: "Menu__new"
+    = link_to "予約確認", root_path, class: "Menu__confirm"

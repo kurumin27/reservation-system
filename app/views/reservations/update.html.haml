@@ -1,6 +1,17 @@
 .Body
   .Contents
     .Contents__field
-      %p 予約の変更が完了しました。
-      %p 調整が必要な場合は別途ご連絡差し上げます。
-      %p 予約の確認をする場合は、メニュー”予約確認”よりご覧いただけます。
+      .MessageTitle 予約の変更が完了しました
+      .Explanation
+        %p 調整が必要な場合は別途ご連絡差し上げます。
+        %p 予約の確認をする際は、トップページよりご覧いただけます。
+      .MessageBox
+        .MessageBox__title ご希望の予約日時
+        .MessageBox__reservation
+          = @reservation.datetime.strftime("%Y- %m- %d / %H時 %M分〜")
+        .MessageBox__title ご希望の予約コース
+        .MessageBox__reservation
+          = @reservation.product.product_name
+        .MessageBox__title ご希望の予約金額
+        .MessageBox__reservation
+          = "#{@reservation.product.price.to_s(:delimited)}円"

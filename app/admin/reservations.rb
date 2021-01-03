@@ -6,31 +6,30 @@ ActiveAdmin.register Reservation do
 
   # 一覧ページの検索条件指定
   filter :name
-  filter :date
-  filter :time
+  filter :datetime
   filter :product_name
   filter :price
   filter :created_at
   filter :updated_at
 
-    # 一覧ページ
-    index do
+  # 一覧ページ
+  index do
       column :id
-      column :date
-      column :time
-      column :user_id
-      column :product_name
+      column :datetime
+      column '商品ID' do |product|
+        link_to product.product_id, admin_products_path(:product)
+      end
+      column 'ユーザーID' do |user|
+        link_to user.user_id, admin_products_path(:user)
+      end
       column :created_at
-  
-      actions 
-    end
-  permit_params :date, :time, :user_id, :product_name
-  # or
-  #
-  # permit_params do
-  #   permitted = [:date, :time, :user_id, :product_id]
-  #   permitted << :other if params[:action] == 'create' && current_user.admin?
-  #   permitted
+    actions
+
+  end
+end
+  # controller do
+  #   def index
+  #    @reservation = Reservation.find(params[:id])
+  #   end
   # end
   
-end

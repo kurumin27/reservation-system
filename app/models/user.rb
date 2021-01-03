@@ -11,7 +11,7 @@ class User < ApplicationRecord
   end
 
   validates :name, presence: true, uniqueness: true
-  validates :telephone, presence: true, format: {with: /\A\d{10,11}\z/}, numericality: { only_integer: true }
+  validates :telephone, presence: true, format: { with: /\A\d{10,11}\z/ }
   validates :password, presence: true, confirmation: true
 
   has_many :reservations, dependent: :destroy

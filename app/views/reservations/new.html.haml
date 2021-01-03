@@ -20,4 +20,4 @@
         - if @reservation.errors.include?(:product)
           = @reservation.errors.full_messages_for(:product).first
       .Reservation
-        = f.submit '予約', class: "Reservation__button"
+        = f.submit '予約', class: "Reservation__button", data: { confirm: "この内容で予約しますか？" }

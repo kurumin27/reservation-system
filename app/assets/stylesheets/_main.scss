@@ -23,34 +23,6 @@
   border-style: none;
 }
 
-.Main {
-  padding-left: 400px;
-  padding-right: 400px;
-  padding-top: 50px;
-  margin-bottom: 40px;
-  width: 100vw;
-  background-image: image-url("background.jpg");
-  background-repeat: no-repeat;
-  background-size: 45%;
-  background-position: 800px;
-  font-size: 13px;
-}
-
-.Information {
-  &__title {
-    border-bottom: 5px solid gray;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  &__reservation {
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-  
 .Datetime {
   @include items;
   margin-top: 20px;
