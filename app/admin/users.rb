@@ -21,7 +21,6 @@ ActiveAdmin.register User do
 
     actions 
   end
-  permit_params :name, :telephone, :email
   # or
   # permit_params do
   #   permitted = [:name, :telephone, :email, :encrypted_password, :remember_created_at]
