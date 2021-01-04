@@ -1,5 +1,6 @@
 ## プロジェクトタイトル
 サロン予約システム
+https://salon-reservation-system.herokuapp.com/users/sign_in
   
 ## 動作確認方法
 Google Chromeの最新版にてご利用ください。<br>
@@ -12,7 +13,7 @@ Google Chromeの最新版にてご利用ください。<br>
   - 新規登録も可能（その際はログアウトをお願い致します）
 
 * adminアカウント<br>
-  ※URLの末尾に"/admin"と入力して下さい。<br>
+  ※URLの末尾の"/users/sign_in"を削除し、"/admin"と入力して下さい。<br>
   - ID: admin@example.com
   - PASSWORD: password
 
