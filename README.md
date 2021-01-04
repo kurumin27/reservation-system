@@ -46,7 +46,6 @@ Heroku
 ## DB設計
 
 ### Admin_usersテーブル
----
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
@@ -58,27 +57,25 @@ Heroku
 |email|string|null: false|
 |telephone|integer|null: false|
 
-### Association
+#### Association
 - has_many :reservations
 
 ### reservations テーブル
----
 |Column|Type|Options|
 |------|----|-------|
 |datetime|datetime|null: false|
 |product_id|references|foreign_key: true|
 |user_id|references|foreign_key: true|
 
-### Association
+#### Association
 - belongs_to :product
 - belongs_to :user
 
 ### productsテーブル
----
 |Column|Type|Options|
 |------|----|-------|
 |product_name|string|null: false|
 |price|integer|null: false|
 
-### Association
+#### Association
 - has_one :reservation
