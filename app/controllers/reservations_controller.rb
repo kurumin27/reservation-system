@@ -1,4 +1,5 @@
 class ReservationsController < ApplicationController
+  before_action :authenticate_user!
   before_action :product_details, only:[:new, :create, :edit, :update]
   before_action :for_user_reservation, only:[:show, :destroy, :edit, :update]
 
