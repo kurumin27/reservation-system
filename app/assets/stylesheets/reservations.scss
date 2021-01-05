@@ -48,16 +48,16 @@
   &__datetime {
     padding: 0px 530px 0px 530px;
     margin: 10px;
-    &__title {
+    &-title {
       @include labels;
       }
-    &__requirement {
+    &-requirement {
       @include requirements;
     }
-    &__select {
+    &-select {
       @include selections;
     }
-    &__alert {
+    &-alert {
       @include errors;
     }
   }
@@ -65,16 +65,16 @@
   &__course {
     padding: 20px 530px 0px 530px;
     margin: 10px;
-    &__title {
+    &-title {
       @include labels;
       }
-    &__requirement {
+    &-requirement {
       @include requirements;
     }
-    &__select {
+    &-select {
       @include selections;
     }
-    &__alert {
+    &-alert {
       @include errors;
     }
   }

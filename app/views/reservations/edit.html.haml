@@ -2,21 +2,21 @@
   .Form-box
     = form_with model: @reservation, local: true do |f|
       .Form-box__datetime
-        = f.label :datetime, 'ご希望の日時', class: "Form-box__datetime__title"
-        %span.Form-box__datetime__requirement
+        = f.label :datetime, 'ご希望の日時', class: "Form-box__datetime-title"
+        %span.Form-box__datetime-requirement
           必須
-        = f.datetime_field :datetime, class: "Form-box__datetime__select"
-      .Form-box__datetime__alert
+        = f.datetime_field :datetime, class: "Form-box__datetime-select"
+      .Form-box__datetime-alert
         - if @reservation.errors.include?(:datetime)
           = @reservation.errors.full_messages_for(:datetime).first
       .Form-box__course
-        = f.label :product_id, 'ご希望のコース', class: "Form-box__course__title"
-        %span.Form-box__course__requirement
+        = f.label :product_id, 'ご希望のコース', class: "Form-box__course-title"
+        %span.Form-box__course-requirement
           必須
         = f.select :product_id, @products.map { |product| [product.product_name, product.id]},
           { include_blank: '選択してください' },
-          { class: "Form-box__course__select" }
-      .Form-box__course__alert
+          { class: "Form-box__course-select" }
+      .Form-box__course-alert
         - if @reservation.errors.include?(:product)
           = @reservation.errors.full_messages_for(:product).first
       .Reservation

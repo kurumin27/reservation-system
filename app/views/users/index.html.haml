@@ -13,5 +13,5 @@
             .ContentField__course
               = render partial: "course", locals: { reservation: reservation}
             .ContentField__details
-              = link_to "詳細確認", reservation_path(reservation.id), method: :get, class: "ContentField__details__reservation"
+              = link_to "詳細確認", reservation_path(reservation.id), method: :get, class: "ContentField__details-reservation"
 

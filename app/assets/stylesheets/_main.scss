@@ -30,19 +30,19 @@
   &__datetime {
     @include items;
     margin-top: 20px;
-    &__title {
+    .Datetime__title {
       @include title-rate;
     }
-    &__description {
+    .Datetime__description {
       @include description-rate;
     }
   }
   &__course {
     @include items;
-    &__title {
+    .Course__title {
       @include title-rate;
     }
-    &__description {
+    .Course__description {
       @include description-rate;
     }
   }
@@ -52,12 +52,12 @@
     bottom: 15px;
     left: 498px;
     text-decoration: none;
-    &__reservation {
+    &-reservation {
       background-color: #db7093;
       text-decoration: none;
       color: white;
       border-radius: 2px;
-      padding: 5px 30px;
+      padding: 5px 25px;
       border-style: none;
     }
   }

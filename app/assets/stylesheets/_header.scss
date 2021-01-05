@@ -39,17 +39,17 @@ $space: 40px;
     font-size: 14px;
     margin-top: 10px;
     margin-bottom: 10px;
-    &__sgin-up {
+    &-sgin-up {
       @include account_left;
       border-left: 1px solid #B3B3B3;
     }
-    &__sgin-in {
+    &-sgin-in {
       @include account_right;
     }
-    &__message {
+    &-message {
       @include account_left;
     }
-    &__logout {
+    &-logout {
       @include account_right;
     }
   }
