@@ -9,6 +9,15 @@ a {
 $font-color: #fff;
 $space: 40px;
 
+@mixin account_left {
+  border-right: 1px solid #B3B3B3;
+  padding: 0px 15px;
+  color: black;
+}
+@mixin account_right {
+  margin: 0px 15px;
+  color: black;
+}
 
 .Header {
   height: 150px;
@@ -31,27 +40,23 @@ $space: 40px;
     margin-top: 10px;
     margin-bottom: 10px;
     &__sgin-up {
-      border-right: 1px solid #B3B3B3;
+      @include account_left;
       border-left: 1px solid #B3B3B3;
-      padding: 0px 15px;
     }
     &__sgin-in {
-      margin-left: 15px;
+      @include account_right;
     }
     &__message {
-      border-right: 1px solid #B3B3B3;
-      border-left: 1px solid #B3B3B3;
-      padding: 0px 15px;
-      color: black;
+      @include account_left;
     }
     &__logout {
-      margin: 0px 15px;
+      @include account_right;
     }
   }
 }
 
 .logout {
-  margin-left: 15px;
+  cursor: pointer;
   border: none;
   background: transparent;
 }
