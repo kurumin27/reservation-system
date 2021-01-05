@@ -23,34 +23,43 @@
   border-style: none;
 }
 
-.Datetime {
-  @include items;
-  margin-top: 20px;
-  &__title {
-    @include title-rate;
-  }
-  &__description {
-    @include description-rate;
-  }
-}
-
-.Course {
-  @include items;
-  &__title {
-    @include title-rate;
-  }
-  &__description {
-    @include description-rate;
-  }
-}
-
-.Details {
-  @include items;
+.ContentField {
+  position: relative;
+  padding-top: 15px;
   border-bottom: 1px solid gray;
-  margin-bottom: 20px;
-  font-size: 16px;
-  font-weight: bold;
-  &__reservation {
-    margin-left: 480px;
+  &__datetime {
+    @include items;
+    margin-top: 20px;
+    &__title {
+      @include title-rate;
+    }
+    &__description {
+      @include description-rate;
+    }
   }
+  &__course {
+    @include items;
+    &__title {
+      @include title-rate;
+    }
+    &__description {
+      @include description-rate;
+    }
+  }
+  &__details {
+    display: flex;
+    position: absolute;
+    bottom: 15px;
+    left: 498px;
+    text-decoration: none;
+    &__reservation {
+      background-color: #db7093;
+      text-decoration: none;
+      color: white;
+      border-radius: 2px;
+      padding: 5px 30px;
+      border-style: none;
+    }
+  }
+  
 }
