@@ -9,9 +9,18 @@ a {
 $font-color: #fff;
 $space: 40px;
 
+@mixin account_left {
+  border-right: 1px solid #B3B3B3;
+  padding: 0px 15px;
+  color: black;
+}
+@mixin account_right {
+  margin: 0px 15px;
+  color: black;
+}
 
 .Header {
-  height: 150px;
+  height: 120px;
 }
 
 .Top {
@@ -27,31 +36,27 @@ $space: 40px;
   &__account {
     display: flex;
     justify-content: end;
-    font-size: 14px;
+    font-size: 1.07rem;
     margin-top: 10px;
     margin-bottom: 10px;
-    &__sgin-up {
-      border-right: 1px solid #B3B3B3;
+    &-sgin-up {
+      @include account_left;
       border-left: 1px solid #B3B3B3;
-      padding: 0px 15px;
     }
-    &__sgin-in {
-      margin-left: 15px;
+    &-sgin-in {
+      @include account_right;
     }
-    &__message {
-      border-right: 1px solid #B3B3B3;
-      border-left: 1px solid #B3B3B3;
-      padding: 0px 15px;
-      color: black;
+    &-message {
+      @include account_left;
     }
-    &__logout {
-      margin: 0px 15px;
+    &-logout {
+      @include account_right;
     }
   }
 }
 
 .logout {
-  margin-left: 15px;
+  cursor: pointer;
   border: none;
   background: transparent;
 }
@@ -60,7 +65,6 @@ $space: 40px;
   display: flex;
   justify-content: flex-start;
   background-color: #BA3056;
-  font-size: 13px;
   padding-left: 50px;
   &__new {
     color: $font-color;

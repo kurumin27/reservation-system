@@ -5,11 +5,13 @@
     .Information__title
       = "#{ current_user.name }さんの予約一覧"
     .Information__reservation
-      - @reservations.each do |reservation|
-        - if user_signed_in? && current_user.id == reservation.user_id
-          .Datetime
-            = render partial: "datetime", locals: { reservation: reservation}
-          .Course
-            = render partial: "course", locals: { reservation: reservation}
-          .Details
-            = link_to "詳細確認", reservation_path(reservation.id), method: :get, class: "Details__reservation"
+      .ContentField
+        - @reservations.each do |reservation|
+          - if user_signed_in? && current_user.id == reservation.user_id
+            .ContentField__datetime
+              = render partial: "datetime", locals: { reservation: reservation}
+            .ContentField__course
+              = render partial: "course", locals: { reservation: reservation}
+            .ContentField__details
+              = link_to "詳細確認", reservation_path(reservation.id), method: :get, class: "ContentField__button"
+            .ContentField__endline

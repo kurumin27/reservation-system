@@ -4,14 +4,14 @@
       = link_to image_tag('logo2.png'), root_path
     %ul.Top__account
       - if user_signed_in?
-        %li.Top__account__message
+        %li.Top__account-message
           = "#{ current_user.name }さん、ようこそ"
-        %li.Top__account__logout
+        %li.Top__account-logout
           = button_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout"
       - else
-        %li.Top__account__sgin-up
+        %li.Top__account-sgin-up
           = link_to "新規会員登録", new_user_registration_path
-        %li.Top__account__sgin-in
+        %li.Top__account-sgin-in
           = link_to "ログイン", new_user_session_path
   .Menu
     = link_to "新規予約", new_reservation_path, class: "Menu__new"

@@ -1,255 +1,216 @@
-* {
-  box-sizing: border-box;
-}
-
-// 共通
-.Body {
-  height: 70vh;
-  font-size: 13px;
-}
-
-// 新規予約時
-@mixin labels {
-  font-weight: bold;
-  line-height: 1.4em;
-  background-color: rgba( 255, 255, 255, 0.45 );
-}
-
-@mixin requirements {
-  background-color: red;
-  color: white;
-  font-size: 11px;
-  display: inline-block;
-  line-height: 1.4em;
-  border-radius: 2px;
-  margin-left: 4px;
-  padding: 1px 2px;
-  font-weight: bold;
-}
-
-@mixin selections{
-  width: 100%;
-  margin-top: 3px;
-  height: 40px;
-  padding: 13px 5px 13px 5px;
-}
-
-@mixin errors {
-  color: red;
-  padding: 0px 530px 0px 530px;
-  margin-left: 10px;
-}
-
-.Form-box {
-  padding-top: 50px;
-  margin-bottom: 40px;
-  width: 100vw;
-  // ご希望の日時
-  &__datetime {
-    padding: 0px 530px 0px 530px;
-    margin: 10px;
-    &__title {
-      @include labels;
-      }
-    &__requirement {
-      @include requirements;
-    }
-    &__select {
-      @include selections;
-    }
-    &__alert {
-      @include errors;
-    }
+@media (min-width: 500px){
+  * {
+    box-sizing: border-box;
   }
-  // ご希望のコース
-  &__course {
-    padding: 20px 530px 0px 530px;
-    margin: 10px;
-    &__title {
-      @include labels;
-      }
-    &__requirement {
-      @include requirements;
-    }
-    &__select {
-      @include selections;
-    }
-    &__alert {
-      @include errors;
-    }
-  }
-}
 
-.Reservation{
-  margin: 40px 0px;
-  text-align: center;
-  &__button {
-    border-style: none;
-    padding: 10px 50px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    text-decoration: none;
-    border-radius: 2px;
-    font-size: 14px;
-    width: calc(100vw - 1140px);
-    border: 2px solid #ffb6c1;
-    background-color: #db7093;
+  // 共通
+  .Body {
+    height: 70vh;
+    margin: 0px auto;
+    max-width: 100%;
+  }
+
+  // 新規予約時
+  @mixin labels {
+    font-weight: bold;
+    line-height: 1.4em;
+  }
+
+  @mixin requirements {
+    background-color: red;
     color: white;
-  }
-}
-
-// 予約後の画面
-.Contents {
-  padding-left: 300px;
-  padding-right: 300px;
-  padding-top: 50px;
-  margin-bottom: 40px;
-  width: 100vw;
-  &__field {
-    color: black;
-    font-size: 13px;
-  }
-}
-
-.MessageTitle {
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.Explanation {
-  margin-left: 150px;
-  margin-right: 150px;
-  border-radius: 4px;
-  padding-left: 25px;
-  margin-bottom: 10px;
-}
-
-.MessageBox {
-  border: 2px solid lightgray;
-  margin-left: 150px;
-  margin-right: 150px;
-  border-radius: 4px;
-  padding: 20px 40px;
-  background-color: white;
-  &__title {
-    font-size: 15px;
-    font-weight: bold;
-    padding-bottom: 10px;
-    padding-top: 10px;
-  }
-  &__reservation {
-    font-size: 13px;
-    padding-left: 20px;
-  }
-}
-
-// 予約の詳細
-* {
-  box-sizing: border-box;
-}
-
-@mixin items {
-  padding-bottom: 15px;
-  display: flex;
-}
-
-@mixin title-rate {
-  width: 40vw;
-}
-
-@mixin description-rate {
-  width: 60vw;
-}
-
-@mixin button {
-  color: white;
-  border-radius: 2px;
-  padding: 5px 30px;
-  border-style: none;
-}
-
-.Main {
-  padding-left: 400px;
-  padding-right: 400px;
-  padding-top: 50px;
-  margin-bottom: 40px;
-  width: 100vw;
-  font-size: 13px;
-}
-
-.Information {
-  &__title {
-    border-bottom: 5px solid gray;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    font-size: 18px;
+    font-size: 0.8rem;
+    display: inline-block;
+    line-height: 1.4em;
+    border-radius: 2px;
+    margin-left: 4px;
+    padding: 1px 2px;
     font-weight: bold;
   }
-  &__reservation {
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
 
-.Box {
-  position: relative;
-  padding-top: 15px;
-  &__change {
-    background-color: #db7093;
-    @include button;
-    position: absolute;
-    top: 30px;
-    left: 498px;
-    text-decoration: none;
-    a {
-      color: white;
+  @mixin selections{
+    width: 100%;
+    margin: 0px auto;
+    height: 40px;
+    padding: 13px 5px 13px 5px;
+  }
+
+  @mixin errors {
+    margin: 0px auto;
+    max-width: 50%;
+    color: red;
+    padding-left: 30px;
+    padding-bottom: 30px;
+  }
+
+  .Form-box {
+    padding-top: 50px;
+    margin: 0px auto;
+    max-width: 100%;
+    .ContentErea {
+      margin: 0px auto;
+      width: 70%;
+    }
+    // ご希望の日時
+    &__datetime {
+      padding: 15px 30px;
+      margin: 0px auto;
+      max-width: 50%;
+      &-title {
+        margin-top: 0px auto;
+        max-width: 70%;
+      }
+      .Label {
+        @include labels;
+      }
+      .Requirement {
+        @include requirements;
+      }
+      &-select {
+        @include selections;
+      }
+      &-alert {
+        @include errors;
+      }
+    }
+    // ご希望のコース
+    &__course {
+      padding: 15px 30px;
+      margin: 0px auto;
+      max-width: 50%;
+      &-title {
+        margin-top: 0px auto;
+        max-width: 70%;
+      }
+      .label {
+        @include labels;
+      }
+      .Requirement {
+        @include requirements;
+      }
+      &-select {
+        @include selections;
+      }
+      &-alert {
+        @include errors;
+      }
     }
   }
-  &__cancel {
-    background-color: gray;
-    @include button;
-    position: absolute;
-    top: 70px;
-    left: 498px;
-    text-decoration: none;
-    a {
+
+  .Reservation{
+    padding-top: 50px;
+    text-align: center;
+    margin: 0px auto;
+    width: 60%;
+    &__button {
+      margin: 0px auto;
+      width: 60%;
+      border-style: none;
+      padding: 10px 140px;
+      text-decoration: none;
+      border-radius: 2px;
+      font-size: 1.07rem;
+      border: 2px solid #ffb6c1;
+      background-color: #db7093;
       color: white;
+      cursor: pointer;
+    }
+  }
+
+  // 予約後の画面（create用） 
+  .Contents {
+    padding-top: 50px;
+    margin-bottom: 40px;
+    margin: 0px auto;
+    max-width: 60%;
+    &__field {
+      color: black;
+    }
+  }
+
+  .MessageTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .Explanation {
+    border-radius: 4px;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    margin: 0px auto;
+    max-width: 70%;
+    text-align: center;
+  }
+
+  .MessageBox {
+    border: 2px solid lightgray;
+    border-radius: 4px;
+    background-color: white;
+    margin: 0px auto;
+    max-width: 70%;
+    text-align: center;
+    padding-bottom: 15px;
+    &__title {
+      font-size: 1.15rem;
+      font-weight: bold;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+    &__reservation {
+      padding-left: 20px;
+    }
+  }
+  // 予約後の画面（create用） ここまで
+  // 予約の詳細と一覧
+  * {
+    box-sizing: border-box;
+  }
+
+  @mixin items {
+    padding-bottom: 15px;
+    display: flex;
+  }
+
+  @mixin title-rate {
+    width: 40vw;
+  }
+
+  @mixin description-rate {
+    width: 60vw;
+  }
+
+  @mixin button {
+    color: white;
+    border-radius: 2px;
+    padding: 5px 30px;
+    border-style: none;
+  }
+
+  .Main {
+    padding-top: 50px;
+    margin: 0px auto;
+    max-width: 70%;
+  }
+
+  .Information {
+    margin-bottom: 40px;
+    max-width: 100%;
+    &__title {
+      border-bottom: 5px solid gray;
+      padding-bottom: 10px;
+      margin: 0px 60px;
+      font-size: 140%;
+      font-weight: bold;
+      text-align: center;
+    }
+    &__reservation {
+      padding-top: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 }
+  // 一覧ページで使用しているのはここまで
 
-.Datetime {
-  @include items;
-  margin-top: 20px;
-  &__title {
-    @include title-rate;
-  }
-  &__description {
-    @include description-rate;
-  }
-}
-
-.Course {
-  @include items;
-  &__title {
-    @include title-rate;
-  }
-  &__description {
-    @include description-rate;
-  }
-}
-
-.Price {
-  @include items;
-  border-bottom: 1px solid gray;
-  margin-bottom: 20px;
-  &__title {
-    @include title-rate;
-  }
-  &__description {
-    @include description-rate;
-  }
-}
