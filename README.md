@@ -38,12 +38,6 @@ Google Chromeの最新版にてご利用ください。<br>
   - 予約の削除機能
   - 管理者ページ（一覧閲覧）機能
   - ゲストログイン機能
-
-  ![image](https://user-images.githubusercontent.com/35267387/103754237-7295f200-504f-11eb-85aa-e730ed7f7777.png)
-  ![image](https://user-images.githubusercontent.com/35267387/103755024-81c96f80-5050-11eb-89a2-a044d16ab08e.png)
-  ![image](https://user-images.githubusercontent.com/35267387/103754859-462ea580-5050-11eb-9f8c-8c3f151c1dc5.png)
-  ![image](https://user-images.githubusercontent.com/35267387/103754945-63fc0a80-5050-11eb-81b1-356871c9e5a4.png)
-  ![image](https://user-images.githubusercontent.com/35267387/103755165-bb9a7600-5050-11eb-85ac-3ced56441137.png)
   
 * 実装において工夫した点
   - ユーザーが使いやすいようにシンプルなデザインにして、配色も３色ほどにしました
@@ -53,6 +47,12 @@ Google Chromeの最新版にてご利用ください。<br>
   - 管理者画面を設けることで管理者が予約スケジュールを確認しやすいようにしました
   - 予約後に、どんな内容で予約したのかを表示するようにしました
 
+  ![image](https://user-images.githubusercontent.com/35267387/103754237-7295f200-504f-11eb-85aa-e730ed7f7777.png)
+  ![image](https://user-images.githubusercontent.com/35267387/103755024-81c96f80-5050-11eb-89a2-a044d16ab08e.png)
+  ![image](https://user-images.githubusercontent.com/35267387/103754859-462ea580-5050-11eb-9f8c-8c3f151c1dc5.png)
+  ![image](https://user-images.githubusercontent.com/35267387/103754945-63fc0a80-5050-11eb-81b1-356871c9e5a4.png)
+  ![image](https://user-images.githubusercontent.com/35267387/103755165-bb9a7600-5050-11eb-85ac-3ced56441137.png)
+  
 ## 課題や今後実装したい機能
 * 予約時に金額がわかるよう、商品が選択されたときに動的に金額が表示される機能を実装したい
 * 商品を管理者画面から追加・編集・削除できるようにしたい
