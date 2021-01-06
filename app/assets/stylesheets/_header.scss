@@ -36,7 +36,7 @@ $space: 40px;
   &__account {
     display: flex;
     justify-content: end;
-    font-size: 14px;
+    font-size: 1.07rem;
     margin-top: 10px;
     margin-bottom: 10px;
     &-sgin-up {
@@ -65,7 +65,6 @@ $space: 40px;
   display: flex;
   justify-content: flex-start;
   background-color: #BA3056;
-  font-size: 13px;
   padding-left: 50px;
   &__new {
     color: $font-color;

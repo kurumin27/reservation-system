@@ -1,130 +1,134 @@
-$font-size: 13px;
+@media (min-width: 500px) {
 
-@mixin title{
-  font-size: $font-size;
-  font-weight: bold;
-  line-height: 1.4em;
-}
-
-@mixin input{
-  width: 100%;
-  margin-top: 3px;
-  height: 40px;
-  font-size: $font-size;
-}
-
-@mixin requirement{
-  background-color: red;
-  color: white;
-  font-size: 11px;
-  display: inline-block;
-  line-height: 1.4em;
-  border-radius: 2px;
-  margin-left: 4px;
-  padding: 1px 2px;
-  font-weight: bold;
-}
-
-@mixin main {
-  margin-top: 50px;
-}
-
-// sgin_inとsgin_up共通
-
-.New_user {
-  @include main;
-}
-
-.Session_user {
-  @include main;
-}
-
-.Field {
-  padding: 0px 570px 35px 570px;
-  font-size: $font-size;
-// sgin_upの記述
-  &__title {
-    @include title;
+  @mixin title{
+    font-weight: bold;
+    line-height: 1.4em;
   }
+
+  @mixin input{
+    // margin: 0px auto;
+    width: 100%;
+    padding-top: 3px;
+    padding-left: 5px;
+    height: 40px;
+  }
+
+  @mixin requirement{
+    background-color: red;
+    color: white;
+    font-size: 0.8rem;
+    display: inline-block;
+    line-height: 1.4em;
+    border-radius: 2px;
+    margin-left: 4px;
+    padding: 1px 2px;
+    font-weight: bold;
+  }
+
+  @mixin main {
+    margin: 0px auto;
+    max-width: 60%;
+  }
+
+  @mixin button-parent {
+    padding: 40px 0px;
+    width: 60%;
+    margin: 0px auto;
+    text-align: center;
+  }
+
+  @mixin button-children {
+    text-decoration: none;
+    border-radius: 2px;
+    width: 80%;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-size: 1.07rem;
+    border: 2px solid #ffb6c1;
+    background-color: #db7093;
+    color: white;
+    cursor: pointer;
+  }
+  // sgin_inとsgin_up共通
+
+  .New_user {
+    @include main;
+  }
+
+  .Session_user {
+    @include main;
+  }
+
+  .Field {
+    margin: 0px auto;
+    max-width: 70%;
+    padding: 0px 0px 35px 0px;
+    &__box {
+      max-width: 100%;
+      .label {
+        @include title;
+      }
+      .Requirement {
+        @include requirement;
+      }
+    }
   &__input {
     @include input;
   }
-  &__requirement {
-    @include requirement;
-  }
-// sgin_inの記述
-  &__item {
-    @include title;
-  }
-  &__registered {
-    @include input;
-  }
-  &__required-fields {
-    @include requirement;
-  }
 }
 
-.Login {
-  margin: 40px 0px;
-  text-align: center;
-  &__button {
-    margin-bottom: 30px;
-    text-decoration: none;
-    border-radius: 2px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    font-size: 14px;
-    width: calc(100vw - 1140px);
-    border: 2px solid #ffb6c1;
-    background-color: #db7093;
-    color: white;
-    cursor: pointer;
-  }  
-}
+  .Login {
+    @include button-parent;
+    &__button {
+      @include button-children;
+      }
+    }
 
-.Register {
-  margin: 40px 0px;
-  text-align: center;
-  &__button {
-    margin-bottom: 30px;
-    text-decoration: none;
-    border-radius: 2px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    font-size: 14px;
-    width: calc(100vw - 1140px);
-    border: 2px solid #ffb6c1;
-    background-color: #db7093;
-    color: white;
-    cursor: pointer;
-  }  
-}
-
-.GuestLogin {
-  margin: 40px 0px;
-  padding: 0px 570px;
-  text-align: center;
-  &__button {
-    margin-bottom: 30px;
-    text-decoration: none;
-    border-radius: 2px;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    font-size: 14px;
-    color: black;
-    width: calc(100vw - 1140px);
-    border: 2px solid gray;
-    padding-right: 61px;
-    padding-left: 61px;
+  .Register {
+    @include button-parent;
+    &__button {
+      @include button-children;
+    }  
   }
-}
 
-.alert {
-  color: red;
-}
+  .GuestLogin {
+    margin: 0px auto;
+    width: 60%;
+    text-align: center;
+    &__button {
+      margin: 0px auto;
+      width: 80%;
+      text-decoration: none;
+      border-radius: 2px;
+      font-size: 1.07rem;
+      color: black;
+      background-color: white;
+      border: 2px solid gray;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      padding-right: 60px;
+      padding-left: 60px;
+      cursor: pointer;
+    }
+  }
 
-// エラーメッセージのときの適用
+  // ログイン時のアラート
+  .alert {
+    margin: 0px auto;
+    max-width: 70%;
+    color: red;
+  }
 
-.field_with_errors {
-  display: contents
+  // 新規登録時のアラート
+  .Alert__register {
+    padding-top: 5px;
+    margin: 0px auto;
+    max-width: 100%;
+    color: red;
+  }
+
+  // エラーメッセージのときのinputフィールドへの適用
+  .field_with_errors {
+    display: contents
+  }
 }

@@ -1,65 +1,104 @@
-// トップページ（予約一覧）
-* {
-  box-sizing: border-box;
-}
-
-@mixin items {
-  padding-bottom: 15px;
-  display: flex;
-}
-
-@mixin title-rate {
-  width: 40vw;
-}
-
-@mixin description-rate {
-  width: 60vw;
-}
-
-@mixin button {
-  color: #ffffff;
-  border-radius: 2px;
-  padding: 5px 30px;
-  border-style: none;
-}
-
-.ContentField {
-  position: relative;
-  padding-top: 15px;
-  border-bottom: 1px solid gray;
-  &__datetime {
-    @include items;
-    margin-top: 20px;
-    .Datetime__title {
-      @include title-rate;
-    }
-    .Datetime__description {
-      @include description-rate;
-    }
+// トップページ（予約一覧）と予約詳細
+@media (min-width: 500px) {
+  * {
+    box-sizing: border-box;
   }
-  &__course {
-    @include items;
-    .Course__title {
-      @include title-rate;
+
+    @mixin items {
+      display: flex;
     }
-    .Course__description {
-      @include description-rate;
+
+    @mixin title {
+      width: 40vw;
+      font-weight: bold;
+      text-align: center;
     }
-  }
-  &__details {
-    display: flex;
-    position: absolute;
-    bottom: 15px;
-    left: 498px;
-    text-decoration: none;
-    &-reservation {
+
+    @mixin description-rate {
+      width: 60vw;
+    }
+
+    @mixin button {
+      color: #ffffff;
+      border-radius: 2px;
+      padding: 5px 30px;
+      border-style: none;
+    }
+
+  .ContentField {
+    margin: 0px auto;
+    padding-top: 15px;
+    max-width: 80%;
+    &__datetime {
+      @include items;
+      margin-top: 20px;
+      padding-bottom: 15px;
+      .Datetime__title {
+        @include title;
+      }
+      .Datetime__description {
+        @include description-rate;
+      }
+    }
+    &__course {
+      @include items;
+      margin-top: 20px;
+      padding-bottom: 15px;
+      .Course__title {
+        @include title;
+      }
+      .Course__description {
+        @include description-rate;
+      }
+    }
+    // 詳細ページ用のみ
+    &__price {
+      @include items;
+      margin-top: 20px;
+      .Price__title {
+        @include title;
+      }
+      .Price__description {
+        @include description-rate;
+      }
+    }
+    &__details {
+      display: flex;
+      text-decoration: none;
+      justify-content: flex-end;
+      padding-right: 50px;
+      &-change {
+        background-color: #db7093;
+        @include button;
+        text-decoration: none;
+        a {
+          color: white;
+        }
+      }
+      &-cancel {
+        background-color: gray;
+        @include button;
+        text-decoration: none;
+        margin-left: 10px;
+        a {
+          color: white;
+        }
+      }
+    }
+    // 詳細ページ用のみここまで
+    // 一覧用
+    &__button {
       background-color: #db7093;
       text-decoration: none;
       color: white;
       border-radius: 2px;
-      padding: 5px 25px;
+      padding: 5px 30px;
       border-style: none;
     }
+    // 一覧用ここまで
+    &__endline {
+      border-bottom: 1px solid gray;
+      margin-top: 10px;
+    }
   }
-  
 }
