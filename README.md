@@ -25,7 +25,8 @@ Google Chromeの最新版にてご利用ください。<br>
   - 新規登録も可能
 
 * adminアカウント<br>
-  ※URLの末尾の"/users/sign_in"を削除し、"/admin"と入力して下さい。<br>
+  ※下記URLよりアクセスして下さい。<br>
+  https://salon-reservation-system.herokuapp.com/admin/login
   - ID: admin@example.com
   - PASSWORD: password
 
@@ -69,6 +70,7 @@ Google Chromeの最新版にてご利用ください。<br>
 * 商品を管理者画面から追加・編集・削除できるような機能
 * 管理画面の予約テーブルでは商品名とお客様名を確認できるような機能
 * スマートフォンやタブレットにも対応したビュー
+* AWSでのデプロイ
 
 ## 使用技術
 Ruby/Ruby on Rails/Haml/Scss/MySQL/Github/Visual Studio Code
