@@ -1,6 +1,6 @@
 ## プロジェクトタイトル
 reservation-system<br>
-https://salon-reservation-system.herokuapp.com/users/sign_in
+https://salon-reservation-system.herokuapp.com
 
 ## アプリケーション概要
 美容マッサージサロンを個人経営する方のお店で利用できるようRailsを使用し、予約システムを開発しました。<br>
